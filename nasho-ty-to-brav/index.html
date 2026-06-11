@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="uk">
 <head>
   <meta charset="utf-8" />
@@ -100,17 +99,33 @@
       object-fit: cover;
     }
 
+    /* Орієнтуємось по ширині чорного знаку */
     .platform-logo {
       position: relative;
       z-index: 1;
-      max-width: 68%;
-      max-height: 48%;
+      width: 42%;
+      height: auto;
+      max-width: none;
+      max-height: none;
       object-fit: contain;
     }
 
+    /* YouTube трохи ширший по природі, тому робимо його
+       з тим самим принципом по ширині, а не по висоті */
+    .platform-logo.youtube {
+      width: 42%;
+    }
+
     .platform-logo.apple {
-      max-width: 54%;
-      max-height: 54%;
+      width: 42%;
+    }
+
+    .platform-logo.youtube-music {
+      width: 42%;
+    }
+
+    .platform-logo.spotify {
+      width: 42%;
     }
 
     .copyright {
@@ -148,7 +163,6 @@
       }
     }
   </style>
-
 </head>
 
 <body>
@@ -156,34 +170,35 @@
     <p class="artist">Bafazol Monk</p>
     <p class="track">Нашо ти то брав</p>
 
-```
-<img class="cover" src="./cover.png" alt="Bafazol Monk — Нашо ти то брав cover" />
+    <img class="cover" src="./cover.png" alt="Bafazol Monk — Нашо ти то брав cover" />
 
-<nav class="platforms" aria-label="Слухати на платформах">
-  <a class="platform-tile" href="https://apple.co/4ehO8oa" target="_blank" rel="noopener noreferrer" aria-label="Apple Music">
-    <img class="platform-bg" src="./bkg1.png" alt="" />
-    <img class="platform-logo apple" src="./apple_music.svg" alt="Apple Music" />
-  </a>
+    <nav class="platforms" aria-label="Слухати на платформах">
+      <!-- 1. Apple Music -->
+      <a class="platform-tile" href="https://apple.co/4ehO8oa" target="_blank" rel="noopener noreferrer" aria-label="Apple Music">
+        <img class="platform-bg" src="./bkg1.png" alt="" />
+        <img class="platform-logo apple" src="./apple_music.svg" alt="Apple Music" />
+      </a>
 
-  <a class="platform-tile" href="https://www.youtube.com/@bafazolmonk" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-    <img class="platform-bg" src="./bkg2.png" alt="" />
-    <img class="platform-logo" src="./youtube.png" alt="YouTube" />
-  </a>
+      <!-- 2. Spotify (поміняно місцями з YouTube) -->
+      <a class="platform-tile" href="https://open.spotify.com/album/5XkwMvusfrCG1AkIAed16X" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
+        <img class="platform-bg" src="./bkg3.png" alt="" />
+        <img class="platform-logo spotify" src="./spotify.png" alt="Spotify" />
+      </a>
 
-  <a class="platform-tile" href="https://music.youtube.com/playlist?list=OLAK5uy_kDbJtOXDCWgOO0ULXRG1am0sCeXLOSbpY" target="_blank" rel="noopener noreferrer" aria-label="YouTube Music">
-    <img class="platform-bg" src="./bkg3.png" alt="" />
-    <img class="platform-logo" src="./youtube_music.png" alt="YouTube Music" />
-  </a>
+      <!-- 3. YouTube Music -->
+      <a class="platform-tile" href="https://music.youtube.com/playlist?list=OLAK5uy_kDbJtOXDCWgOO0ULXRG1am0sCeXLOSbpY" target="_blank" rel="noopener noreferrer" aria-label="YouTube Music">
+        <img class="platform-bg" src="./bkg2.png" alt="" />
+        <img class="platform-logo youtube-music" src="./youtube_music.png" alt="YouTube Music" />
+      </a>
 
-  <a class="platform-tile" href="https://open.spotify.com/album/5XkwMvusfrCG1AkIAed16X" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
-    <img class="platform-bg" src="./bkg4.png" alt="" />
-    <img class="platform-logo" src="./spotify.png" alt="Spotify" />
-  </a>
-</nav>
+      <!-- 4. YouTube -->
+      <a class="platform-tile" href="https://www.youtube.com/@bafazolmonk" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <img class="platform-bg" src="./bkg4.png" alt="" />
+        <img class="platform-logo youtube" src="./youtube.png" alt="YouTube" />
+      </a>
+    </nav>
 
-<p class="copyright">© 2026 Bafazol Monk</p>
-```
-
+    <p class="copyright">© 2026 Bafazol Monk</p>
   </main>
 </body>
 </html>
