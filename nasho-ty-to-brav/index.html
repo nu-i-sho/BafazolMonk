@@ -13,6 +13,11 @@
       box-sizing: border-box;
     }
 
+    :root {
+      --content-width: min(86vw, 460px);
+      --tile-gap: 4px;
+    }
+
     html {
       min-height: 100%;
       background: #050505;
@@ -38,42 +43,33 @@
       text-align: center;
     }
 
-    .top-title {
-      margin: 0 0 18px;
-      font-size: 20px;
-      line-height: 1.2;
-      font-weight: 700;
-      letter-spacing: 0.03em;
-    }
-
-    .cover {
-      display: block;
-      width: min(86vw, 460px);
-      margin: 0 auto 22px;
-      box-shadow: 0 20px 70px rgba(0, 0, 0, 0.75);
-    }
-
     .artist {
       margin: 0 0 4px;
+      font-size: 26px;
+      line-height: 1.15;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+
+    .track {
+      margin: 0 0 20px;
       font-size: 24px;
       line-height: 1.15;
       font-weight: 700;
     }
 
-    .track {
-      margin: 0 0 26px;
-      font-size: 22px;
-      line-height: 1.15;
-      font-weight: 700;
+    .cover {
+      display: block;
+      width: var(--content-width);
+      margin: 0 auto 16px;
+      box-shadow: 0 20px 70px rgba(0, 0, 0, 0.75);
     }
 
     .platforms {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 6px;
-      flex-wrap: nowrap;
-      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--tile-gap);
+      width: var(--content-width);
       margin: 0 auto;
     }
 
@@ -82,8 +78,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 132px;
-      height: 132px;
+      aspect-ratio: 1 / 1;
       overflow: hidden;
       text-decoration: none;
       background: #111;
@@ -103,7 +98,6 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 1;
     }
 
     .platform-logo {
@@ -119,22 +113,21 @@
       max-height: 54%;
     }
 
-    @media (max-width: 620px) {
-      .platforms {
-        gap: 5px;
+    .copyright {
+      margin: 24px 0 0;
+      font-size: 12px;
+      line-height: 1.4;
+      opacity: 0.55;
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --content-width: min(92vw, 460px);
+        --tile-gap: 3px;
       }
 
-      .platform-tile {
-        width: 23vw;
-        height: 23vw;
-        min-width: 72px;
-        min-height: 72px;
-        max-width: 112px;
-        max-height: 112px;
-      }
-
-      .top-title {
-        font-size: 18px;
+      body {
+        padding: 22px 10px;
       }
 
       .artist {
@@ -143,6 +136,15 @@
 
       .track {
         font-size: 20px;
+        margin-bottom: 18px;
+      }
+
+      .cover {
+        margin-bottom: 12px;
+      }
+
+      .copyright {
+        margin-top: 20px;
       }
     }
   </style>
@@ -151,13 +153,11 @@
 
 <body>
   <main>
-    <h1 class="top-title">Bafazol Monk — Нашо ти то брав</h1>
+    <p class="artist">Bafazol Monk</p>
+    <p class="track">Нашо ти то брав</p>
 
 ```
 <img class="cover" src="./cover.png" alt="Bafazol Monk — Нашо ти то брав cover" />
-
-<p class="artist">Bafazol Monk</p>
-<p class="track">Нашо ти то брав</p>
 
 <nav class="platforms" aria-label="Слухати на платформах">
   <a class="platform-tile" href="https://apple.co/4ehO8oa" target="_blank" rel="noopener noreferrer" aria-label="Apple Music">
@@ -180,6 +180,8 @@
     <img class="platform-logo" src="./spotify.png" alt="Spotify" />
   </a>
 </nav>
+
+<p class="copyright">© 2026 Bafazol Monk</p>
 ```
 
   </main>
