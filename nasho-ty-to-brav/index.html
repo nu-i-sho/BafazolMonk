@@ -1,1 +1,187 @@
-in progress
+<!doctype html>
+
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bafazol Monk — Нашо ти то брав</title>
+  <meta name="description" content="Bafazol Monk — Нашо ти то брав. Слухати на платформах." />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-height: 100%;
+      background: #050505;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 50% 12%, rgba(255,255,255,0.08), transparent 34%),
+        #050505;
+      color: #f2f2f2;
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 28px 14px;
+    }
+
+    main {
+      width: 100%;
+      max-width: 720px;
+      text-align: center;
+    }
+
+    .top-title {
+      margin: 0 0 18px;
+      font-size: 20px;
+      line-height: 1.2;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .cover {
+      display: block;
+      width: min(86vw, 460px);
+      margin: 0 auto 22px;
+      box-shadow: 0 20px 70px rgba(0, 0, 0, 0.75);
+    }
+
+    .artist {
+      margin: 0 0 4px;
+      font-size: 24px;
+      line-height: 1.15;
+      font-weight: 700;
+    }
+
+    .track {
+      margin: 0 0 26px;
+      font-size: 22px;
+      line-height: 1.15;
+      font-weight: 700;
+    }
+
+    .platforms {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: nowrap;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .platform-tile {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 132px;
+      height: 132px;
+      overflow: hidden;
+      text-decoration: none;
+      background: #111;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      transition: transform 0.12s ease, opacity 0.12s ease, border-color 0.12s ease;
+    }
+
+    .platform-tile:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+      border-color: rgba(255, 255, 255, 0.34);
+    }
+
+    .platform-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 1;
+    }
+
+    .platform-logo {
+      position: relative;
+      z-index: 1;
+      max-width: 68%;
+      max-height: 48%;
+      object-fit: contain;
+    }
+
+    .platform-logo.apple {
+      max-width: 54%;
+      max-height: 54%;
+    }
+
+    @media (max-width: 620px) {
+      .platforms {
+        gap: 5px;
+      }
+
+      .platform-tile {
+        width: 23vw;
+        height: 23vw;
+        min-width: 72px;
+        min-height: 72px;
+        max-width: 112px;
+        max-height: 112px;
+      }
+
+      .top-title {
+        font-size: 18px;
+      }
+
+      .artist {
+        font-size: 22px;
+      }
+
+      .track {
+        font-size: 20px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <main>
+    <h1 class="top-title">Bafazol Monk — Нашо ти то брав</h1>
+
+```
+<img class="cover" src="./cover.png" alt="Bafazol Monk — Нашо ти то брав cover" />
+
+<p class="artist">Bafazol Monk</p>
+<p class="track">Нашо ти то брав</p>
+
+<nav class="platforms" aria-label="Слухати на платформах">
+  <a class="platform-tile" href="https://apple.co/4ehO8oa" target="_blank" rel="noopener noreferrer" aria-label="Apple Music">
+    <img class="platform-bg" src="./bkg1.png" alt="" />
+    <img class="platform-logo apple" src="./apple_music.svg" alt="Apple Music" />
+  </a>
+
+  <a class="platform-tile" href="https://www.youtube.com/@bafazolmonk" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+    <img class="platform-bg" src="./bkg2.png" alt="" />
+    <img class="platform-logo" src="./youtube.png" alt="YouTube" />
+  </a>
+
+  <a class="platform-tile" href="https://music.youtube.com/playlist?list=OLAK5uy_kDbJtOXDCWgOO0ULXRG1am0sCeXLOSbpY" target="_blank" rel="noopener noreferrer" aria-label="YouTube Music">
+    <img class="platform-bg" src="./bkg3.png" alt="" />
+    <img class="platform-logo" src="./youtube_music.png" alt="YouTube Music" />
+  </a>
+
+  <a class="platform-tile" href="https://open.spotify.com/album/5XkwMvusfrCG1AkIAed16X" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
+    <img class="platform-bg" src="./bkg4.png" alt="" />
+    <img class="platform-logo" src="./spotify.png" alt="Spotify" />
+  </a>
+</nav>
+```
+
+  </main>
+</body>
+</html>
