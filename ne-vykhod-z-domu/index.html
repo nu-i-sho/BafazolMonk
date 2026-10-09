@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#736449" />
+  <title>Bafazol Monk — Не виходь з дому</title>
+  <meta name="description" content="Bafazol Monk — Не виходь з дому. Слухати на Apple Music, Spotify, YouTube Music та YouTube." />
+  <link rel="canonical" href="https://nu-i-sho.github.io/BafazolMonk/ne-vykhod-z-domu/" />
+  <meta property="og:type" content="music.song" />
+  <meta property="og:locale" content="uk_UA" />
+  <meta property="og:title" content="Bafazol Monk — Не виходь з дому" />
+  <meta property="og:description" content="Слухати на Apple Music, Spotify, YouTube Music та YouTube." />
+  <meta property="og:url" content="https://nu-i-sho.github.io/BafazolMonk/ne-vykhod-z-domu/" />
+  <meta property="og:image" content="https://nu-i-sho.github.io/BafazolMonk/ne-vykhod-z-domu/cover-social.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="1200" />
+  <meta property="og:image:alt" content="Обкладинка «Не виходь з дому» — Bafazol Monk" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --content-width: min(86vw, 460px);
+      --tile-gap: 4px;
+      --frame-color: #5c030a;
+    }
+
+    html {
+      min-height: 100%;
+      background: #40392e;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100svh;
+      background:
+        radial-gradient(ellipse at 50% 28%, rgba(147, 129, 94, 0.12), transparent 65%),
+        linear-gradient(180deg, #736449 0%, #6b5e46 38%, #594e3b 70%, #40392e 100%);
+      color: #f2f2f2;
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 28px 14px;
+    }
+
+    main {
+      width: 100%;
+      max-width: 720px;
+      text-align: center;
+    }
+
+    .artist {
+      margin: 0 0 4px;
+      font-size: 26px;
+      line-height: 1.15;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+
+    .track {
+      margin: 0 0 20px;
+      font-size: 24px;
+      line-height: 1.15;
+      font-weight: 700;
+    }
+
+    .cover {
+      display: block;
+      width: var(--content-width);
+      height: auto;
+      margin: 0 auto 16px;
+      box-shadow: 0 20px 70px rgba(28, 23, 16, 0.38);
+    }
+
+    .platforms {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: var(--tile-gap);
+      width: var(--content-width);
+      margin: 0 auto;
+    }
+
+    .platform-tile {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      text-decoration: none;
+      background: var(--frame-color);
+      transition: transform 0.12s ease, filter 0.12s ease;
+    }
+
+    .platform-tile:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.06);
+    }
+
+    .platform-tile:focus-visible {
+      outline: 3px solid #f2e6ce;
+      outline-offset: 4px;
+    }
+
+    .platform-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .platform-logo {
+      position: relative;
+      z-index: 1;
+      object-fit: contain;
+      display: block;
+      height: auto;
+    }
+
+    .platform-logo.apple {
+      width: 50%;
+    }
+
+    .platform-logo.spotify {
+      width: 52%;
+    }
+
+    .platform-logo.youtube-music {
+      width: 56%;
+    }
+
+    .platform-logo.youtube {
+      width: 72%;
+      transform: scale(1.18);
+    }
+
+    .copyright {
+      margin: 24px 0 0;
+      font-size: 12px;
+      line-height: 1.4;
+      opacity: 0.65;
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --content-width: min(92vw, 460px);
+        --tile-gap: 3px;
+      }
+
+      body {
+        padding: 22px 10px;
+      }
+
+      .artist {
+        font-size: 22px;
+      }
+
+      .track {
+        font-size: 20px;
+        margin-bottom: 18px;
+      }
+
+      .cover {
+        margin-bottom: 12px;
+      }
+
+      .copyright {
+        margin-top: 20px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .platform-tile {
+        transition: none;
+      }
+
+      .platform-tile:hover {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <p class="artist">Bafazol Monk</p>
+    <h1 class="track">Не виходь з дому</h1>
+
+    <img class="cover" src="./cover.webp" srcset="./cover-small.webp 640w, ./cover.webp 1200w" sizes="(max-width: 480px) 92vw, (max-width: 535px) 86vw, 460px" width="1200" height="1200" fetchpriority="high" decoding="async" alt="Обкладинка «Не виходь з дому» — Bafazol Monk" />
+
+    <nav class="platforms" aria-label="Слухати на платформах">
+      <a class="platform-tile" href="https://music.apple.com/us/album/6813946268" target="_blank" rel="noopener noreferrer" aria-label="Слухати в Apple Music">
+        <img class="platform-bg" src="./bkg1.webp" width="400" height="400" decoding="async" alt="" />
+        <img class="platform-logo apple" src="./apple_music.svg" width="361" height="361" alt="Apple Music" />
+      </a>
+
+      <a class="platform-tile" href="https://open.spotify.com/album/4GGfQByXDvKnwe8ffFeKi9" target="_blank" rel="noopener noreferrer" aria-label="Слухати в Spotify">
+        <img class="platform-bg" src="./bkg3.webp" width="400" height="400" decoding="async" alt="" />
+        <img class="platform-logo spotify" src="./spotify.webp" width="320" height="320" decoding="async" alt="Spotify" />
+      </a>
+
+      <a class="platform-tile" href="https://music.youtube.com/playlist?list=OLAK5uy_l6Go7knFsD2DJbLVJPliepCg_yQ_n2A2Y" target="_blank" rel="noopener noreferrer" aria-label="Слухати в YouTube Music">
+        <img class="platform-bg" src="./bkg2.webp" width="400" height="400" decoding="async" alt="" />
+        <img class="platform-logo youtube-music" src="./youtube_music.webp" width="320" height="320" decoding="async" alt="YouTube Music" />
+      </a>
+
+      <a class="platform-tile" href="https://www.youtube.com/watch?v=V5DHBt_jjWg" target="_blank" rel="noopener noreferrer" aria-label="Дивитися на YouTube">
+        <img class="platform-bg" src="./bkg4.webp" width="400" height="400" decoding="async" alt="" />
+        <img class="platform-logo youtube" src="./youtube.webp" width="320" height="274" decoding="async" alt="YouTube" />
+      </a>
+    </nav>
+
+    <p class="copyright">© 2026 Bafazol Monk</p>
+  </main>
+</body>
+</html>
